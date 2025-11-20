@@ -283,3 +283,58 @@ body::before {
     margin-top: 0;
     margin-bottom: 15px;
 }
+
+
+/* ======================================================= */
+/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES (Max 768px) */
+/* ======================================================= */
+@media (max-width: 768px) {
+    
+    /* A. MENÚ DE NAVEGACIÓN (.menu-destino) */
+    .menu-destino {
+        padding: 0 10px; /* Menos espacio en los lados */
+        gap: 10px; /* Menos espacio entre botones */
+    }
+
+    /* B. PÁGINA DE EXPLORACIÓN (3 COLUMNAS A 1) */
+    .destinos {
+        width: 100%; /* Ocupa todo el ancho */
+        /* Eliminamos las 3 columnas y forzamos el apilamiento */
+        display: block; 
+        margin: 20px auto;
+    }
+    
+    /* Ajustamos las celdas para que cada destino ocupe todo el ancho */
+    .celda-texto, .destino {
+        display: block; /* Ocupa el 100% */
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    /* Aseguramos que la imagen del destino se centre y sea legible */
+    .destino-img {
+        width: 90%; 
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* C. PÁGINAS DE DETALLE (2 COLUMNAS A 1) */
+    /* Apilamos las columnas del mapa y la info esencial verticalmente */
+    .mapa-columna, .texto-columna {
+        width: 100%; /* Ahora ocupan el ancho completo */
+        display: block;
+        padding: 10px 0;
+        text-align: left;
+    }
+
+    /* Ajustamos el tamaño de la imagen principal para que no sea demasiado grande */
+    .chichen-img {
+        width: 90%; 
+    }
+    
+    /* Ajuste de título */
+    .contenido-detalle h1 {
+        font-size: 1.5em; /* Reducir el tamaño de los títulos */
+    }
+}
